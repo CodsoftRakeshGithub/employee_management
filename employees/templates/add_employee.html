@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <title>Document</title>
+</head>
+<body>
+<form method="post" action="{% url 'add_employee' %}">
+    {% csrf_token %}
+    <label for="name">Name:</label>
+    <input type="text" name="name" required><br>
+    <label for="age">Age:</label>
+    <input type="number" name="age" required><br>
+    <label for="department">Department:</label>
+    <input type="text" name="department" required><br>
+    <input type="submit" value="Add Employee">
+</form>
+</body>
+</html>

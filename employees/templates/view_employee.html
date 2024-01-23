@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %} 
+    <title>Document</title>
+</head>
+<body>
+    {% if employee %}
+     <h2>Employee Information:</h2>
+    <p><strong>Name:</strong> {{ employee.name }}</p>
+    <p><strong>Age:</strong> {{ employee.age }}</p>
+    <p><strong>Department:</strong> {{ employee.department }}</p>
+    {% else %}
+        <p>Employee not found!</p>
+{% endif %}
+
+</body>
+</html>

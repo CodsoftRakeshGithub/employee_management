@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <title>Document</title>
+</head>
+<body>
+
+<h2>List of Employees:</h2>
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Department</th>
+    </tr>
+    {% for employee in employees %}
+        <tr>
+            <td>{{ employee.name }}</td>
+            <td>{{ employee.age }}</td>
+            <td>{{ employee.department }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
